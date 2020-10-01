@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgdef"
+    >
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="359dp"
+        android:layout_height="270dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        app:srcCompat="@drawable/logo" />
+
+    <EditText
+        android:id="@+id/etuser"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/etpass"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="35dp"
+        android:background="#1F000000"
+        android:drawableLeft="@drawable/ic_action_user"
+        android:ems="10"
+        android:hint="Nombre de Usuario"
+        android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/etpass"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/etuser"
+        android:layout_alignLeft="@+id/etuser"
+        android:layout_alignBottom="@+id/btnInicio"
+        android:layout_marginBottom="110dp"
+        android:background="#1F000000"
+        android:drawableLeft="@drawable/ic_action_pass"
+        android:ems="10"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF" />
+
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="6dp"
+        android:text="Registrarse Aquí"
+        android:textColorHint="#FFFFFF"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/logo"
+        android:layout_alignStart="@+id/logo"
+        android:id="@+id/linearLayout">
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnInicio"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/tv1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="31dp"
+        android:background="@drawable/button_background"
+        android:text="Iniciar Sesión"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        />
+</RelativeLayout>
