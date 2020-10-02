@@ -1,0 +1,75 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgdef"
+    >
+
+    <EditText
+        android:id="@+id/etuser"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/etpass"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="35dp"
+        android:background="#1F000000"
+        android:drawableLeft="@drawable/ic_action_user"
+        android:ems="157"
+        android:hint="Nombre de Usuario"
+        android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/etpass"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/etuser"
+        android:layout_alignLeft="@+id/etuser"
+        android:layout_alignBottom="@+id/btnRegistro"
+        android:layout_marginBottom="300dp"
+        android:background="#1F000000"
+        android:drawableLeft="@drawable/ic_action_pass"
+        android:ems="10"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/logo"
+        android:layout_alignStart="@+id/logo"
+        android:id="@+id/linearLayout">
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnRegistro"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="37dp"
+        android:background="@drawable/button_background"
+        android:text="Registrar"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/etuser"
+        android:layout_alignStart="@+id/etuser"
+        android:layout_marginBottom="30dp"
+        android:text="Llene los siguientes campos"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+</RelativeLayout>
