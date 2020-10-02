@@ -8,7 +8,6 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
@@ -20,6 +19,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     EditText etuser, etpass;
@@ -41,17 +42,17 @@ public class MainActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     String user = etuser.getText().toString();
                     String password = etpass.getText().toString();
-                    if( (!user.equals("Javier")) || (!password.equals("asd123")) ){
-                        Context context = getApplicationContext();
-                        CharSequence text = "Autenticación incorrecta";
-                        int duration = Toast.LENGTH_SHORT;
 
-                        Toast toast = Toast.makeText(context, text, duration);
-                        toast.show();
-                    }else{
-                        openActivity3();
-                    }
+                        if( (!user.equals("Javier")) || (!password.equals("asd123")) ){
+                            Context context = getApplicationContext();
+                            CharSequence text = "Autenticación incorrecta";
+                            int duration = Toast.LENGTH_SHORT;
 
+                            Toast toast = Toast.makeText(context, text, duration);
+                            toast.show();
+                        } else {
+                            openActivity3();
+                        }
                 }
             });
 
