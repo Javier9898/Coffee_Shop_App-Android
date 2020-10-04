@@ -43,4 +43,5 @@ public class Activity3 extends AppCompatActivity {
         Intent intent = new Intent(this, ComboMenu.class);
         startActivity(intent);
     }
+
 }

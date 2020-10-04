@@ -134,10 +134,11 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/txrPriceBurger"
+                        android:id="@+id/txtTPriceBurger"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="$6.99"
+                        android:inputType="number"
+                        android:text="6.99"
                         android:textSize="20sp"
                         android:textStyle="bold|italic"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -199,10 +200,10 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/txrPriceAlitas"
+                        android:id="@+id/txtPriceAlitas"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="$7.99"
+                        android:text="7.99"
                         android:textSize="20sp"
                         android:textStyle="bold|italic"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -264,10 +265,10 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/txrPriceTostadas"
+                        android:id="@+id/txtPriceTostadas"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="$4.99"
+                        android:text="4.99"
                         android:textSize="20sp"
                         android:textStyle="bold|italic"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -329,10 +330,10 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/txrPriceEmpanada"
+                        android:id="@+id/txtPriceEmpanada"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="$2.99"
+                        android:text="2.99"
                         android:textSize="20sp"
                         android:textStyle="bold|italic"
                         app:layout_constraintEnd_toEndOf="parent"
