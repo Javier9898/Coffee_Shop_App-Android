@@ -3,6 +3,8 @@ package com.example.proyecto1coffeshop;
 //Pantalla en la cual se mostraran dos radiobuttons los cuales permitiran elegir entre
 //combo o selección de un item individual
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
@@ -25,6 +27,7 @@ public class Activity3 extends AppCompatActivity {
                 //creo que este es el codigo para hacer que al darle click al checkbox,
                 //este haga algo.
                 //Aquí se pone los eventos que hará el ck1.(ir a una pantalla diferente)
+                openAlGusto();
             }
         });
         ck2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -32,8 +35,19 @@ public class Activity3 extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 //Aquí se pone los eventos que hará el ck2.(ir a una pantalla diferente)
+                openComboMenu();
             }
         });
 
     }
+    public void openComboMenu(){
+        Intent intent = new Intent(this, ComboMenu.class);
+        startActivity(intent);
+    }
+
+    public void openAlGusto(){
+        Intent intent = new Intent(this, ArmarPedido.class);
+        startActivity(intent);
+    }
+
 }

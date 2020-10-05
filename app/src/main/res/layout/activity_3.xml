@@ -41,7 +41,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="410dp"
         android:buttonTint="#000000"
-        android:text="Quiero Escoger a mi Gusto"
+        android:text="Quiero algo ligero"
         android:textColor="#000000"
         android:textColorHighlight="#000000"
         android:textColorHint="#000000"
