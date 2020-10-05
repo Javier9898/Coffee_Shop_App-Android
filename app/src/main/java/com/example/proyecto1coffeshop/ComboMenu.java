@@ -2,6 +2,7 @@ package com.example.proyecto1coffeshop;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -20,7 +21,7 @@ public class ComboMenu extends AppCompatActivity implements View.OnClickListener
     private ImageView imgBurger, imgAlitas, imgTostadas, imgEmpanada;
     private TextView txtBurger, txtAlitas, txtTostadas, txtEmpanadas, txtTPriceBurger, txtPriceAlitas,
             txtPriceTostadas, txtPriceEmpanada, txtTotalPagar;
-    private Button btnAddBurger, btnAddAlitas, btnAddTostadas, btnAddEmpanada, btnVolver;
+    private Button btnAddBurger, btnAddAlitas, btnAddTostadas, btnAddEmpanada, btnVolver, btnConfirmar;
     private Double precioAlitas, precioBurger, precioTostadas, precioEmpanadas;
     private Double totalCombo = 0.0;
     private ListView lvDatosCombo;
@@ -57,12 +58,14 @@ public class ComboMenu extends AppCompatActivity implements View.OnClickListener
         btnAddAlitas = findViewById(R.id.btnAddAlitas);
         btnAddTostadas = findViewById(R.id.btnAddTostadas);
         btnVolver = findViewById(R.id.btnVolver);
+        btnConfirmar = findViewById(R.id.btnConfirmar);
 
         btnAddBurger.setOnClickListener(this);
         btnAddEmpanada.setOnClickListener(this);
         btnAddAlitas.setOnClickListener(this);
         btnAddTostadas.setOnClickListener(this);
         btnVolver.setOnClickListener(this);
+        btnConfirmar.setOnClickListener(this);
 
         //Parseo los precios
 
@@ -91,7 +94,7 @@ public class ComboMenu extends AppCompatActivity implements View.OnClickListener
                 adaptadorCombo = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,listaCombo);
                 lvDatosCombo.setAdapter(adaptadorCombo);
 
-                txtTotalPagar.setText("Total: "+ df.format(totalCombo));
+                txtTotalPagar.setText("Total: "+ df.format(totalCombo)+"$");
                 break;
 
             case R.id.btnAddAlitas:
@@ -105,7 +108,7 @@ public class ComboMenu extends AppCompatActivity implements View.OnClickListener
                 listaCombo.add(item2);
                 adaptadorCombo = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,listaCombo);
                 lvDatosCombo.setAdapter(adaptadorCombo);
-                txtTotalPagar.setText("Total: "+ df.format(totalCombo));
+                txtTotalPagar.setText("Total: "+ df.format(totalCombo)+"$");
 
                 break;
 
@@ -120,7 +123,7 @@ public class ComboMenu extends AppCompatActivity implements View.OnClickListener
                 listaCombo.add(item3);
                 adaptadorCombo = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,listaCombo);
                 lvDatosCombo.setAdapter(adaptadorCombo);
-                txtTotalPagar.setText("Total: "+ df.format(totalCombo));
+                txtTotalPagar.setText("Total: "+ df.format(totalCombo)+"$");
 
                 break;
 
@@ -135,11 +138,22 @@ public class ComboMenu extends AppCompatActivity implements View.OnClickListener
                 listaCombo.add(item4);
                 adaptadorCombo = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,listaCombo);
                 lvDatosCombo.setAdapter(adaptadorCombo);
-                txtTotalPagar.setText("Total: "+ df.format(totalCombo));
+                txtTotalPagar.setText("Total: "+ df.format(totalCombo)+"$");
                 break;
 
             case R.id.btnVolver:
                 finish();
+                break;
+
+            case R.id.btnConfirmar:
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+                builder.setTitle("Confirmación de pedido");
+                builder.setMessage("Su pedido ha sido confirmado con éxito.");
+                builder.setPositiveButton("Aceptar", null);
+
+                AlertDialog dialog = builder.create();
+                dialog.show();
                 break;
         }
     }

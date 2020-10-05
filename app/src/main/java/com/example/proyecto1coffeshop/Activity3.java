@@ -20,6 +20,7 @@ public class Activity3 extends AppCompatActivity {
         ck1=(CheckBox)findViewById(R.id.ck1);
         ck2=(CheckBox)findViewById(R.id.ck2);
 
+
         ck1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 
             @Override
@@ -29,6 +30,8 @@ public class Activity3 extends AppCompatActivity {
                 //Aquí se pone los eventos que hará el ck1.(ir a una pantalla diferente)
                 openAlGusto();
             }
+
+
         });
         ck2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 
