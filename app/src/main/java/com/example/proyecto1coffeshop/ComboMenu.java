@@ -20,7 +20,7 @@ public class ComboMenu extends AppCompatActivity implements View.OnClickListener
     private ImageView imgBurger, imgAlitas, imgTostadas, imgEmpanada;
     private TextView txtBurger, txtAlitas, txtTostadas, txtEmpanadas, txtTPriceBurger, txtPriceAlitas,
             txtPriceTostadas, txtPriceEmpanada, txtTotalPagar;
-        private Button btnAddBurger, btnAddAlitas, btnAddTostadas, btnAddEmpanada;
+    private Button btnAddBurger, btnAddAlitas, btnAddTostadas, btnAddEmpanada, btnVolver;
     private Double precioAlitas, precioBurger, precioTostadas, precioEmpanadas;
     private Double totalCombo = 0.0;
     private ListView lvDatosCombo;
@@ -40,27 +40,29 @@ public class ComboMenu extends AppCompatActivity implements View.OnClickListener
         imgBurger = findViewById(R.id.imgBurger);
         imgAlitas = findViewById(R.id.imgAlitas);
         imgTostadas = findViewById(R.id.imgTostadas);
-        imgEmpanada = findViewById(R.id.imgEmpanada);
+        imgEmpanada = findViewById(R.id.imgEmpanadas);
 
         txtBurger = findViewById(R.id.txtBurger);
         txtTostadas = findViewById(R.id.txtTostadas);
         txtAlitas = findViewById(R.id.txtAlitas);
-        txtEmpanadas = findViewById(R.id.txtEmpanada);
+        txtEmpanadas = findViewById(R.id.txtEmpanadas);
         txtPriceAlitas = findViewById(R.id.txtPriceAlitas);
-        txtPriceEmpanada = findViewById(R.id.txtPriceEmpanada);
+        txtPriceEmpanada = findViewById(R.id.txtPriceEmpanadas);
         txtPriceTostadas = findViewById(R.id.txtPriceTostadas);
-        txtTPriceBurger = findViewById(R.id.txtTPriceBurger);
+        txtTPriceBurger = findViewById(R.id.txtPriceBurger);
         txtTotalPagar = findViewById(R.id.txtTotalPagar);
 
         btnAddBurger = findViewById(R.id.btnAddBurger);
-        btnAddEmpanada = findViewById(R.id.btnAddEmpanada);
+        btnAddEmpanada = findViewById(R.id.btnAddEmpanadas);
         btnAddAlitas = findViewById(R.id.btnAddAlitas);
         btnAddTostadas = findViewById(R.id.btnAddTostadas);
+        btnVolver = findViewById(R.id.btnVolver);
 
         btnAddBurger.setOnClickListener(this);
         btnAddEmpanada.setOnClickListener(this);
         btnAddAlitas.setOnClickListener(this);
         btnAddTostadas.setOnClickListener(this);
+        btnVolver.setOnClickListener(this);
 
         //Parseo los precios
 
@@ -122,7 +124,7 @@ public class ComboMenu extends AppCompatActivity implements View.OnClickListener
 
                 break;
 
-            case R.id.btnAddEmpanada:
+            case R.id.btnAddEmpanadas:
                 totalCombo= totalCombo + precioEmpanadas;
                 cantEmpanada++;
 
@@ -134,7 +136,10 @@ public class ComboMenu extends AppCompatActivity implements View.OnClickListener
                 adaptadorCombo = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,listaCombo);
                 lvDatosCombo.setAdapter(adaptadorCombo);
                 txtTotalPagar.setText("Total: "+ df.format(totalCombo));
+                break;
 
+            case R.id.btnVolver:
+                finish();
                 break;
         }
     }

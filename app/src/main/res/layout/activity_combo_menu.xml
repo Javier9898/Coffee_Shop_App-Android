@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutCombo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ComboMenu">
@@ -33,12 +34,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        android:layout_marginStart="16dp"
         android:layout_marginBottom="42dp"
         android:background="@drawable/button_menus"
         android:padding="8dp"
         android:scrollHorizontally="false"
-        android:text="Volver"
 
+        android:text="Volver"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="@+id/imageView"
@@ -95,7 +97,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/txtTPriceBurger"
+                        android:id="@+id/txtPriceBurger"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:inputType="number"
@@ -268,7 +270,7 @@
                     android:layout_height="match_parent">
 
                     <ImageView
-                        android:id="@+id/imgEmpanada"
+                        android:id="@+id/imgEmpanadas"
                         android:layout_width="168dp"
                         android:layout_height="153dp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -277,7 +279,7 @@
                         app:srcCompat="@drawable/empanada" />
 
                     <TextView
-                        android:id="@+id/txtEmpanada"
+                        android:id="@+id/txtEmpanadas"
                         android:layout_width="140dp"
                         android:layout_height="44dp"
                         android:layout_marginTop="16dp"
@@ -287,22 +289,22 @@
                         android:textSize="18sp"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/imgEmpanada"
+                        app:layout_constraintStart_toEndOf="@+id/imgEmpanadas"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/txtPriceEmpanada"
+                        android:id="@+id/txtPriceEmpanadas"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="2.99"
                         android:textSize="20sp"
                         android:textStyle="bold|italic"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/imgEmpanada"
-                        app:layout_constraintTop_toBottomOf="@+id/txtEmpanada" />
+                        app:layout_constraintStart_toEndOf="@+id/imgEmpanadas"
+                        app:layout_constraintTop_toBottomOf="@+id/txtEmpanadas" />
 
                     <Button
-                        android:id="@+id/btnAddEmpanada"
+                        android:id="@+id/btnAddEmpanadas"
                         android:layout_width="93dp"
                         android:layout_height="35dp"
                         android:layout_marginBottom="15dp"
@@ -314,7 +316,7 @@
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/imgEmpanada" />
+                        app:layout_constraintStart_toEndOf="@+id/imgEmpanadas" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
