@@ -25,9 +25,8 @@ public class Activity3 extends AppCompatActivity {
 
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                openAlGusto();
                 ck1.toggle();
+                openAlGusto();
             }
 
 
