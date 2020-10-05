@@ -2,6 +2,7 @@ package com.example.proyecto1coffeshop;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -21,7 +22,7 @@ public class ArmarPedido extends AppCompatActivity implements View.OnClickListen
     private ImageView imgCafe, imgGalletas, imgPan, imgCupcake;
     private TextView txtCafe, txtGalletas, txtPan, txtCupcakes, txtPriceCafe, txtPriceGalletas,
             txtPricePan, txtPriceCupcake, txtTotal;
-    private Button btnAddCafe, btnAddGalletas, btnAddPan, btnAddCupcake, btnVolver, btnConfirmar;
+    private Button btnAddCafe, btnAddGalletas, btnAddPan, btnAddCupcake, btnVolver, btnConfirmar1;
     private Double precioCafe, precioGalletas, precioPan, precioCupcake;
     private Double totalArmar = 0.0;
     private ListView lvDatosPedido;
@@ -58,12 +59,14 @@ public class ArmarPedido extends AppCompatActivity implements View.OnClickListen
         btnAddGalletas = findViewById(R.id.btnAddGalletas);
         btnAddPan = findViewById(R.id.btnAddPan);
         btnVolver = findViewById(R.id.btnVolver);
+        btnConfirmar1 = findViewById(R.id.btnConfirmar1);
 
         btnAddCafe.setOnClickListener(this);
         btnAddCupcake.setOnClickListener(this);
         btnAddGalletas.setOnClickListener(this);
         btnAddPan.setOnClickListener(this);
         btnVolver.setOnClickListener(this);
+        btnConfirmar1.setOnClickListener(this);
 
         //Parseo los precios
 
@@ -92,7 +95,7 @@ public class ArmarPedido extends AppCompatActivity implements View.OnClickListen
                 adaptadorPedido = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,listaPedido);
                 lvDatosPedido.setAdapter(adaptadorPedido);
 
-                txtTotal.setText("Total: "+ df.format(totalArmar));
+                txtTotal.setText("Total: "+ df.format(totalArmar)+"$");
                 break;
 
             case R.id.btnAddGalletas:
@@ -106,7 +109,7 @@ public class ArmarPedido extends AppCompatActivity implements View.OnClickListen
                 listaPedido.add(item2);
                 adaptadorPedido = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,listaPedido);
                 lvDatosPedido.setAdapter(adaptadorPedido);
-                txtTotal.setText("Total: "+ df.format(totalArmar));
+                txtTotal.setText("Total: "+ df.format(totalArmar)+"$");
 
                 break;
 
@@ -121,7 +124,7 @@ public class ArmarPedido extends AppCompatActivity implements View.OnClickListen
                 listaPedido.add(item3);
                 adaptadorPedido = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,listaPedido);
                 lvDatosPedido.setAdapter(adaptadorPedido);
-                txtTotal.setText("Total: "+ df.format(totalArmar));
+                txtTotal.setText("Total: "+ df.format(totalArmar)+"$");
 
                 break;
 
@@ -136,11 +139,22 @@ public class ArmarPedido extends AppCompatActivity implements View.OnClickListen
                 listaPedido.add(item4);
                 adaptadorPedido = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,listaPedido);
                 lvDatosPedido.setAdapter(adaptadorPedido);
-                txtTotal.setText("Total: "+ df.format(totalArmar));
+                txtTotal.setText("Total: "+ df.format(totalArmar)+"$");
                 break;
 
             case R.id.btnVolver:
                 finish();
+                break;
+
+            case R.id.btnConfirmar1:
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+                builder.setTitle("Confirmación de pedido");
+                builder.setMessage("Su pedido ha sido confirmado con éxito.");
+                builder.setPositiveButton("Aceptar", null);
+
+                AlertDialog dialog = builder.create();
+                dialog.show();
                 break;
         }
     }
@@ -150,5 +164,4 @@ public class ArmarPedido extends AppCompatActivity implements View.OnClickListen
         String resultado = platillo+"  " +"  " + precio.toString()+"$ " + " ("+cantidad +")";
         return resultado;
     }
-
-}
+ }
