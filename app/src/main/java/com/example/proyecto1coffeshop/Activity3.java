@@ -25,7 +25,9 @@ public class Activity3 extends AppCompatActivity {
 
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
                 openAlGusto();
+                ck1.toggle();
             }
 
 
@@ -34,6 +36,7 @@ public class Activity3 extends AppCompatActivity {
 
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                ck2.toggle();
                 openComboMenu();
             }
         });
