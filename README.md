@@ -2,5 +2,4 @@
 Proyecto 1. App para una cafetería.
 
 
-En progreso...
-Solo está completado el login
+
