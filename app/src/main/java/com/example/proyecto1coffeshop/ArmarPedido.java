@@ -4,13 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-
-public class ListCombos extends AppCompatActivity {
+public class ArmarPedido extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_combos);
-
+        setContentView(R.layout.activity_armar_pedido);
     }
 }
