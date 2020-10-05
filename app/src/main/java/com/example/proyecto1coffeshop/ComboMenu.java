@@ -16,6 +16,7 @@ import android.widget.Toast;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class ComboMenu extends AppCompatActivity implements View.OnClickListener {
     private ImageView imgBurger, imgAlitas, imgTostadas, imgEmpanada;
@@ -147,9 +148,12 @@ public class ComboMenu extends AppCompatActivity implements View.OnClickListener
 
             case R.id.btnConfirmar:
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                Random rand = new Random();
+                int upperbound = 999999;
+                int codigo = rand.nextInt(upperbound);
 
                 builder.setTitle("Confirmación de pedido");
-                builder.setMessage("Su pedido ha sido confirmado con éxito.");
+                builder.setMessage("Su pedido ha sido confirmado con éxito. Código: "+ codigo);
                 builder.setPositiveButton("Aceptar", null);
 
                 AlertDialog dialog = builder.create();

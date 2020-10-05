@@ -59,6 +59,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="6dp"
         android:text="Registrarse Aquí"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
         android:textColorHint="#FFFFFF"
         android:textSize="20sp" />
 
