@@ -147,23 +147,18 @@ public class ComboMenu extends AppCompatActivity implements View.OnClickListener
                 break;
 
             case R.id.btnConfirmar:
-                AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                Random rand = new Random();
-                int upperbound = 999999;
-                int codigo = rand.nextInt(upperbound);
-
-                builder.setTitle("Confirmación de pedido");
-                builder.setMessage("Su pedido ha sido confirmado con éxito. Código: "+ codigo);
-                builder.setPositiveButton("Aceptar", null);
-
-                AlertDialog dialog = builder.create();
-                dialog.show();
+                openConfirmado();
                 break;
         }
     }
 
     public void openComboMenu(){
         Intent intent = new Intent(this, Activity3.class);
+        startActivity(intent);
+    }
+
+    public void openConfirmado(){
+        Intent intent = new Intent(this, Confirmado.class);
         startActivity(intent);
     }
 

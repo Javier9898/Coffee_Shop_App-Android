@@ -148,21 +148,15 @@ public class ArmarPedido extends AppCompatActivity implements View.OnClickListen
                 break;
 
             case R.id.btnConfirmar1:
-                AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                Random rand = new Random();
-                int upperbound = 999999;
-                int codigo = rand.nextInt(upperbound);
-
-                builder.setTitle("Confirmación de pedido");
-                builder.setMessage("Su pedido ha sido confirmado con éxito. Código: "+ codigo);
-                builder.setPositiveButton("Aceptar", null);
-
-                AlertDialog dialog = builder.create();
-                dialog.show();
+                openConfirmado();
                 break;
         }
     }
 
+    public void openConfirmado(){
+        Intent intent = new Intent(this, Confirmado.class);
+        startActivity(intent);
+    }
 
     public String ItemLista(String platillo, Double precio, int cantidad){
         String resultado = platillo+"  " +"  " + precio.toString()+"$ " + " ("+cantidad +")";

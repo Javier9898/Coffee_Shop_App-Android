@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ArmarPedido1"></activity>
+        <activity android:name=".Confirmado"></activity>
+        <activity android:name=".ArmarPedido1" />
         <activity android:name=".ArmarPedido" />
         <activity android:name=".ComboMenu" />
         <activity android:name=".Activity3" />
