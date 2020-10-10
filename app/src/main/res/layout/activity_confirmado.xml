@@ -104,7 +104,7 @@
                 android:layout_height="56dp"
                 android:layout_marginStart="113dp"
                 android:layout_marginEnd="127dp"
-                android:layout_marginBottom="56dp"
+                android:layout_marginBottom="40dp"
                 android:background="@drawable/button_red"
                 android:text="Volver al menu"
                 android:textAllCaps="false"
@@ -121,7 +121,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="69dp"
                 android:layout_marginEnd="69dp"
-                android:layout_marginBottom="44dp"
+                android:layout_marginBottom="20dp"
                 app:layout_constraintBottom_toTopOf="@+id/btnVolverAlmenu"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
